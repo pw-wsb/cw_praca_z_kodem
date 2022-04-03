@@ -8,11 +8,11 @@ jobs:
       - run: python --version
       - name: Check python version
         uses: actions/checkout@v3     
-   check_pylint:
-      runs-on: ubuntu-latest
-      steps:
-        - run: pylint $(git ls-files '*.py')
-        - name: Check pylint
-          uses: actions/checkout@v3
+  check_pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pylint $(git ls-files '*.py')
+      - name: Check pylint
+        uses: actions/checkout@v3
     
 
