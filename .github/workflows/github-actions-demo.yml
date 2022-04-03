@@ -11,7 +11,8 @@ jobs:
   check_pylint:
     runs-on: ubuntu-latest
     steps:
-      - run: pylint $(git ls-files '*.py')
+      - run: pip install pylint
+      - run: find . -type f -name "*.py" | xargs pylint 
       - name: Check pylint
         uses: actions/checkout@v3
     
