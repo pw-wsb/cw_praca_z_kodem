@@ -15,5 +15,11 @@ jobs:
       - run: pylint app.py
       - name: Check pylint
         uses: actions/checkout@v3
+  build_docker:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: docker build --tag test-flask-app .
+      - name: Build docker image
+        uses: actions/checkout@v3
     
 
