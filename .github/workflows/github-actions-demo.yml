@@ -1,0 +1,11 @@
+name: My first Github Workflow
+on: [push]
+jobs:
+   Test-github-actions:
+      runs-on: ubuntu-latest
+      steps:
+	  - run: git status
+	  - run: git pull
+	  - run: echo "Sprawdzasz zmiany"
+	  - name: Check status and pull changes
+	    uses: actions/checkout@v3
