@@ -4,7 +4,7 @@ jobs:
   Test-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Sprawdzanie zmian"
-      - run: git status
-      - run: git pull
+      - run: docker --version
+      - run: python --version
+      - name: Check python version
         uses: actions/checkout@v3
