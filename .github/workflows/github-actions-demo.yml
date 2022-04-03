@@ -1,11 +1,10 @@
-name: My first Github Workflow
+name: First Job Patryk Wozniak
 on: [push]
 jobs:
-   Test-github-actions:
-      runs-on: ubuntu-latest
-      steps:
-	 - run: git status
-	 - run: git pull
-	 - run: echo "Sprawdzasz zmiany"
-	 - name: Check status and pull changes
-	   uses: actions/checkout@v3
+  Test-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Sprawdzanie zmian"
+      - run: git status
+      - run: git pull
+        uses: actions/checkout@v3
