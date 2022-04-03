@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: find . -type f -name "*.py" | xargs pylint 
+      - run: pylint $(git ls-files '*.py')
       - name: Check pylint
         uses: actions/checkout@v3
     
