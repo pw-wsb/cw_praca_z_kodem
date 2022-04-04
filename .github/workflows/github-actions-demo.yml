@@ -11,10 +11,12 @@ jobs:
   check_pylint:
     runs-on: ubuntu-latest
     steps:
-      - run: pip install pylint
-      - run: pylint app.py
-      - name: Check pylint
-        uses: actions/checkout@v3
+      - name: Check pylint code
+        uses: actions/checkout@v2
+      - name: Install requirements
+        run: pip install pylint
+      - name: Test app.py
+        run: pylint app.py
   build_docker:
     runs-on: ubuntu-latest
     steps: 
